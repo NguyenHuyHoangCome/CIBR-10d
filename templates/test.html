@@ -23,8 +23,8 @@
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-		<a class="navbar-brand font-weight-bolder mr-3" href="index.html"><img
-				src="../static/assets/img/" /></a>
+		<a class="navbar-brand font-weight-bolder mr-3" href=""><img
+				src="../static/logo/" /></a>
 		<button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault"
 			aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -39,11 +39,11 @@
 			</ul>
 			<ul class="navbar-nav ml-auto align-items-center">
 				<li class="nav-item">
-					<a class="nav-link active" href="index.html">Trang chủ</a>
+					<a class="nav-link active" href="">Trang chủ</a>
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="author.html"><img class="rounded-circle mr-2"
+					<a class="nav-link" href=""><img class="rounded-circle mr-2"
 							src="../static/assets/img/av.png" width="30" /><span class="align-middle">Cá nhân</span></a>
 				</li>
 			</ul>
@@ -70,7 +70,12 @@
 						</button>
 
 					</form>
-					<!-- <button style="margin-top: 10px" type="submit" class="btn btn-danger" onclick="get_image()">
+					{% if filename %}
+						<div>
+							<img src="{[filename]}">
+						</div>
+					{% endif %}
+						<!-- <button style="margin-top: 10px" type="submit" class="btn btn-danger" onclick="get_image()">
 						get_image
 					</button> -->
 				</div>
